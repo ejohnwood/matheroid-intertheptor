@@ -1,16 +1,24 @@
-# 🚀 Matheroid Interceptor ("Matheroid Intertheptor")
+# 🚀 Matheroid Intertheptor
 
-> **A high-octane, NASA-Cyberpunk arcade game designed to build rapid mental math fluency.**
+> **A high-octane, NASA-Cyberpunk arcade game designed to build mental math fluency.**
 
-![Matheroid Interceptor Theme](https://img.shields.io/badge/Aesthetic-NASA%20Cyberpunk-00ffcc?style=for-the-badge)
+![Matheroid Intertheptor Theme](https://img.shields.io/badge/Aesthetic-NASA%20Cyberpunk-00ffcc?style=for-the-badge)
 ![Tech Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20Vanilla%20JS-ff0066?style=for-the-badge)
-![Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(Standalone)-ff9900?style=for-the-badge)
+![Hosting](https://img.shields.io/badge/Hosted%20With-GitHub%20Pages-2ea44f?style=for-the-badge&logo=github)
+
+---
+
+## 🌐 Live Game
+
+Play **Matheroid Intertheptor** right in your web browser:
+
+🎮 **[Play Live on GitHub Pages](https://ejohnwood.github.io/matheroid-intertheptor/)**
 
 ---
 
 ## 📖 Overview
 
-**Matheroid Interceptor** (publicly hosted as **Matheroid Intertheptor**) combines classic 80s space arcade thrillers with modern web aesthetics and tuned pedagogical design. 
+**Matheroid Intertheptor** combines classic 80s space arcade thrillers with modern web aesthetics and tuned pedagogical design. 
 
 Math questions fall from deep space as menacing polygon asteroids towards your planetary defense ship. Type the correct answer on your keyboard or number pad to lock on with high-powered neon lasers and destroy the incoming threats before they breach your ship's energy shields.
 
@@ -58,32 +66,29 @@ Before launching into orbit, players can customize their gameplay experience:
 
 ---
 
-## 🚀 Quick Start / Local Setup
+## 🚀 Local Development / Running Locally
 
 No build steps or Node package installations are required!
 
-### Option 1: Standard Web App
-Open `index.html` directly in any modern web browser:
-```bash
-# Simply double click index.html or open via local dev server
-index.html
-```
+Simply clone the repository and open `index.html` in your browser:
 
-### Option 2: Portable Single-File Version
-For easy distribution, email sharing, or classroom offline use:
-Open `AsteroidInterceptor_Portable.html` — a completely self-contained single file with all HTML, CSS, and JS bundled inside.
+```bash
+# Clone the repository
+git clone https://github.com/ejohnwood/matheroid-intertheptor.git
+
+# Open index.html directly in any browser
+```
 
 ---
 
-## 📁 File Structure
+## 📁 Repository File Structure
 
 ```text
-solar-einstein/
-├── index.html                       # Main Game HTML Structure
-├── style.css                        # Cyberpunk CSS Design System & Keyframe Animations
-├── script.js                        # Game Engine, State Machine & Math Generator
-├── AsteroidInterceptor_Portable.html # All-in-one Single File Standalone Build
-└── README.md                        # Project Documentation
+matheroid-intertheptor/
+├── index.html       # Main Game HTML Structure
+├── style.css        # Cyberpunk CSS Design System & Keyframe Animations
+├── script.js        # Game Engine, State Machine & Math Generator
+└── README.md        # Project Documentation
 ```
 
 ---
