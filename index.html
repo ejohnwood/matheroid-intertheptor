@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asteroid Interceptor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="game-container">
+    <!-- Parallax Background -->
+    <div class="parallax-layer layer-1"></div>
+    <div class="parallax-layer layer-2"></div>
+    <div class="parallax-layer layer-3"></div>
+
+    <div id="start-screen">
+      <div class="menu-content">
+        <h1>MISSION CONFIG</h1>
+        
+        <div class="config-section">
+          <h3>OPERATION</h3>
+          <div class="btn-group" id="op-select">
+            <button class="menu-btn active" data-value="add">+</button>
+            <button class="menu-btn" data-value="sub">-</button>
+            <button class="menu-btn" data-value="mult">×</button>
+            <button class="menu-btn" data-value="div">÷</button>
+            <button class="menu-btn" data-value="all">ALL</button>
+          </div>
+        </div>
+
+        <div class="config-section">
+          <h3>DIFFICULTY</h3>
+          <div class="btn-group" id="diff-select">
+            <button class="menu-btn active" data-value="easy">EASY (K-2)</button>
+            <button class="menu-btn" data-value="medium">MED (3-4)</button>
+            <button class="menu-btn" data-value="hard">HARD (5+)</button>
+          </div>
+        </div>
+
+        <div class="config-section">
+          <h3>ENGINE SPEED</h3>
+          <div class="btn-group" id="speed-select">
+            <button class="menu-btn" data-value="eco">ECO</button>
+            <button class="menu-btn active" data-value="cruise">CRUISE</button>
+            <button class="menu-btn" data-value="warp">WARP</button>
+          </div>
+        </div>
+
+        <button id="start-btn">LAUNCH MISSION</button>
+      </div>
+    </div>
+
+    <canvas id="game-canvas"></canvas>
+    <svg id="laser-container"></svg>
+    <div id="flash-overlay"></div>
+
+    <div id="cockpit">
+      <div id="hud-left">
+        <div class="hud-label">SHIELD STABILITY</div>
+        <div id="shield-container">
+          <div id="shield-bar"></div>
+        </div>
+        <div class="hud-label">SENSORS</div>
+        <div class="hud-value" id="score-value">000</div>
+      </div>
+      <div id="hud-center">
+        <div id="streak-meter">STREAK: <span id="streak-value">0</span></div>
+        <div class="input-glow">
+          <input type="text" id="answer-input" placeholder="READY..." autocomplete="off" />
+        </div>
+      </div>
+      <div id="hud-right">
+        <div class="hud-label">SYSTEM</div>
+        <div class="hud-value" id="system-status">ONLINE</div>
+        <div class="hud-label">DRIVE MODE</div>
+        <div id="drive-mode">NORMAL</div>
+      </div>
+    </div>
+
+    <div id="game-over" class="hidden">
+      <h1>SYSTEM CRITICAL</h1>
+      <p>INTERCEPTION FAILED</p>
+      <button id="restart-btn">REBOOT SYSTEM</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
