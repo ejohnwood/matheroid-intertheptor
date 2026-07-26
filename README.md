@@ -18,9 +18,9 @@ Play **Matheroid Intertheptor** right in your web browser:
 
 ## 📖 Overview
 
-**Matheroid Intertheptor** combines classic 80s space arcade thrillers with modern web aesthetics and tuned pedagogical design. 
+**Matheroid Intertheptor** combines classic '80s space arcade games with modern web aesthetics and tuned pedagogical design.
 
-Math questions fall from deep space as menacing polygon asteroids towards your planetary defense ship. Type the correct answer on your keyboard or number pad to lock on with high-powered neon lasers and destroy the incoming threats before they breach your ship's energy shields.
+Math problems descend through space as polygonal asteroids toward your planetary defense ship. Type the correct answer on your keyboard or number pad to lock on with high-powered neon lasers and destroy the incoming threats before they breach your ship's energy shields.
 
 ---
 
@@ -31,8 +31,8 @@ Before launching into orbit, players can customize their gameplay experience:
 * **Operations**: Practice Addition (`+`), Subtraction (`-`), Multiplication (`×`), Division (`÷`), or `ALL` (Mixed operations).
 * **Difficulty Levels (Tuned for Mental Math)**:
   * **EASY**: Single-digit addition & subtraction facts (0–12), 0–5 multiplication tables, divisors 1–5.
-  * **MEDIUM**: Sums/minuends 12–50, 0–10 multiplication tables, divisors 1–12.
-  * **HARD**: Double-digit mental math (sums/differences 20–100), 2–12 multiplication tables, quotients 5–20. *No tedious 3-digit pen-and-paper math!*
+  * **MEDIUM**: Sums/minuends 12–50, 0–12 multiplication tables, divisors 1–12.
+  * **HARD**: Double-digit addition and subtraction (20–100), multiplication using 4–20 × 2–9, and quotients 5–20. *No tedious 3-digit pen-and-paper math!*
 * **Engine Speeds**:
   * 🌱 **ECO (Training Mode)**: 12-second fall time, 4-second spawn rate. Ideal for beginners learning new math concepts.
   * 🚀 **CRUISE (Standard)**: 8-second fall time, 2.5-second spawn rate. Balanced arcade pace.
@@ -44,14 +44,14 @@ Before launching into orbit, players can customize their gameplay experience:
 
 * 👹 **Boss Asteroids (Red Polygons)**
   * Spawns automatically every **5th** asteroid.
-  * 1.5x larger, moves slower, and awards **3 Points** (versus 1 point for standard asteroids).
+  * 1.5x larger and awards **3 Points** (versus 1 point for standard asteroids).
 * 💣 **Golden Smart Bomb (Gold Polygons)**
   * Spawns every **10 Points** earned.
   * Destroying a Golden Asteroid triggers a screen-wide EMP burst, instantly clearing all asteroids on screen!
-  * *Smart Conflict Handler*: If a Boss and Smart Bomb spawn at the same time, the Boss drops first, followed 800ms later by the Smart Bomb.
+  * If a Boss and Smart Bomb are due at the same time, the Boss drops first, followed 800ms later by the Smart Bomb.
 * ⚡ **Hyper-Drive Mode**
   * Reaching a **5-streak** activates Hyper-Drive!
-  * Transforms your ship's thrusters to supercharged cyan beams, speeds up background starwarp, and awards **2x score multipliers**.
+  * Transforms your ship's thrusters to supercharged cyan beams, speeds up the background starwarp, and awards bonus points.
 * 🧠 **Smart Input Matrix (Instant Error Rejection)**
   * If a player types a number that doesn't match the prefix of *any* active asteroid on screen, the HUD input box instantly shakes red and clears itself.
   * Eliminates the "staring at a wrong answer" friction, giving kids immediate tactile feedback to try again.
@@ -85,10 +85,11 @@ git clone https://github.com/ejohnwood/matheroid-intertheptor.git
 
 ```text
 matheroid-intertheptor/
-├── index.html       # Main Game HTML Structure
-├── style.css        # Cyberpunk CSS Design System & Keyframe Animations
-├── script.js        # Game Engine, State Machine & Math Generator
-└── README.md        # Project Documentation
+├── index.html                            # Main game HTML structure
+├── style.css                             # Visual design and animations
+├── script.js                             # Game engine and math generator
+├── LICENSE                               # MIT License
+└── README.md                             # Project documentation
 ```
 
 ---
@@ -103,4 +104,4 @@ matheroid-intertheptor/
 
 ## 📄 License
 
-MIT License. Free for educational and personal use!
+Released under the [MIT License](LICENSE), including commercial, educational, and personal use.
