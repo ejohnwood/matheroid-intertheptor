@@ -413,7 +413,7 @@ function checkAnswer() {
 
         drawLaser(centerX, centerY);
         triggerScreenShake();
-        createShatterEffect(centerX, centerY, matched.isGolden ? '#ffcc00' : (matched.isBoss ? '#ff0000' : '#555'));
+        createShatterEffect(centerX, centerY, matched.isGolden ? '#ffcc00' : (matched.isBoss ? '#b56cff' : '#555'));
 
         if (matched.isGolden) {
             triggerSmartBomb();

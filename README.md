@@ -1,107 +1,56 @@
 # 🚀 Matheroid Intertheptor
 
-> **A high-octane, NASA-Cyberpunk arcade game designed to build mental math fluency.**
+**A high-octane, NASA-cyberpunk arcade game that builds mental math fluency.**
 
-![Matheroid Intertheptor Theme](https://img.shields.io/badge/Aesthetic-NASA%20Cyberpunk-00ffcc?style=for-the-badge)
-![Tech Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20Vanilla%20JS-ff0066?style=for-the-badge)
-![Hosting](https://img.shields.io/badge/Hosted%20With-GitHub%20Pages-2ea44f?style=for-the-badge&logo=github)
+## 🎮 Play Game
 
----
+### [Launch Matheroid Intertheptor](https://ejohnwood.github.io/matheroid-intertheptor/)
 
-## 🌐 Live Game
+## About
 
-Play **Matheroid Intertheptor** right in your web browser:
+Math problems descend through space as asteroids headed for your planetary defense ship. Type the correct answer to lock on and destroy them before they breach your shields.
 
-🎮 **[Play Live on GitHub Pages](https://ejohnwood.github.io/matheroid-intertheptor/)**
+Choose an operation, difficulty, and game speed to create a practice session that fits the player.
 
----
+## ✨ Features
 
-## 📖 Overview
+- Practice addition, subtraction, multiplication, division, or a mix of all four.
+- Choose from three mental-math difficulty levels and three game speeds.
+- Destroy every fifth **Violet Boss Asteroid** for bonus points.
+- Hit **Golden Smart Bombs** to clear every asteroid on screen.
+- Build a five-answer streak to activate **Hyper-Drive** and bonus scoring.
+- Get immediate feedback when an entered number cannot match any active answer.
+- Enjoy a neon HUD, laser effects, screen shakes, and parallax starfields.
 
-**Matheroid Intertheptor** combines classic '80s space arcade games with modern web aesthetics and tuned pedagogical design.
+## 🧠 Difficulty Settings
 
-Math problems descend through space as polygonal asteroids toward your planetary defense ship. Type the correct answer on your keyboard or number pad to lock on with high-powered neon lasers and destroy the incoming threats before they breach your ship's energy shields.
+| Level | Addition & Subtraction | Multiplication | Division |
+| --- | --- | --- | --- |
+| **Easy** | Facts up to 12 | 0–5 tables | Divisors 1–5 |
+| **Medium** | Problems up to 50 | 0–12 tables | Divisors 1–12 |
+| **Hard** | Problems up to 100 | 4–20 × 2–9 | Quotients 5–20 |
 
----
+Engine speed can be set to **Eco** for learning, **Cruise** for balanced play, or **Warp** for a fast challenge.
 
-## ✨ Key Features
+## 🕹️ How to Play
 
-### 🎛️ Mission Configuration Menu
-Before launching into orbit, players can customize their gameplay experience:
-* **Operations**: Practice Addition (`+`), Subtraction (`-`), Multiplication (`×`), Division (`÷`), or `ALL` (Mixed operations).
-* **Difficulty Levels (Tuned for Mental Math)**:
-  * **EASY**: Single-digit addition & subtraction facts (0–12), 0–5 multiplication tables, divisors 1–5.
-  * **MEDIUM**: Sums/minuends 12–50, 0–12 multiplication tables, divisors 1–12.
-  * **HARD**: Double-digit addition and subtraction (20–100), multiplication using 4–20 × 2–9, and quotients 5–20. *No tedious 3-digit pen-and-paper math!*
-* **Engine Speeds**:
-  * 🌱 **ECO (Training Mode)**: 12-second fall time, 4-second spawn rate. Ideal for beginners learning new math concepts.
-  * 🚀 **CRUISE (Standard)**: 8-second fall time, 2.5-second spawn rate. Balanced arcade pace.
-  * ⚡ **WARP (Challenge)**: 4-second fall time, 1.2-second spawn rate. Reflex training for math whizzes.
+1. Choose an operation, difficulty, and engine speed.
+2. Select **Launch Mission**.
+3. Type an asteroid's answer using your keyboard or number pad.
+4. Keep answering correctly to protect your shields and build your streak.
 
----
+> A physical keyboard or number pad is currently required.
 
-### 🎮 Arcade Mechanics & Power-ups
+## Run Locally
 
-* 👹 **Boss Asteroids (Red Polygons)**
-  * Spawns automatically every **5th** asteroid.
-  * 1.5x larger and awards **3 Points** (versus 1 point for standard asteroids).
-* 💣 **Golden Smart Bomb (Gold Polygons)**
-  * Spawns every **10 Points** earned.
-  * Destroying a Golden Asteroid triggers a screen-wide EMP burst, instantly clearing all asteroids on screen!
-  * If a Boss and Smart Bomb are due at the same time, the Boss drops first, followed 800ms later by the Smart Bomb.
-* ⚡ **Hyper-Drive Mode**
-  * Reaching a **5-streak** activates Hyper-Drive!
-  * Transforms your ship's thrusters to supercharged cyan beams, speeds up the background starwarp, and awards bonus points.
-* 🧠 **Smart Input Matrix (Instant Error Rejection)**
-  * If a player types a number that doesn't match the prefix of *any* active asteroid on screen, the HUD input box instantly shakes red and clears itself.
-  * Eliminates the "staring at a wrong answer" friction, giving kids immediate tactile feedback to try again.
-
----
-
-## 🎨 Visual & Aesthetic Design
-
-* **NASA Cyberpunk Theme**: Neon green `#00ffcc` HUDs, crimson alert indicators, animated laser paths, visual screen shakes, and multi-layered CSS parallax starfields.
-* **Readable Math Fonts**: Clean, high-legibility sans-serif typography (`Verdana`) on asteroids ensures numbers like `0`, `6`, and `8` are instantly readable under pressure.
-* **Encouraging Feedback**: Replaced harsh "Mission Failed" screens with an encouraging **"SYSTEM OFFLINE"** summary highlighting total **Asteroids Intercepted**.
-
----
-
-## 🚀 Local Development / Running Locally
-
-No build steps or Node package installations are required!
-
-Simply clone the repository and open `index.html` in your browser:
+Clone the repository and open `index.html` in a modern browser:
 
 ```bash
-# Clone the repository
 git clone https://github.com/ejohnwood/matheroid-intertheptor.git
-
-# Open index.html directly in any browser
 ```
 
----
-
-## 📁 Repository File Structure
-
-```text
-matheroid-intertheptor/
-├── index.html                            # Main game HTML structure
-├── style.css                             # Visual design and animations
-├── script.js                             # Game engine and math generator
-├── LICENSE                               # MIT License
-└── README.md                             # Project documentation
-```
-
----
-
-## 🕹️ Controls
-
-* **Keyboard / Numpad**: Type the numerical answer to lock on and fire.
-* **Auto-Clear**: Type incorrect numbers to trigger instant auto-clear feedback.
-* **Focus Retention**: Input field automatically maintains focus so gameplay is never interrupted by accidental clicks.
-
----
+No build tools or package installation are required.
 
 ## 📄 License
 
-Released under the [MIT License](LICENSE), including commercial, educational, and personal use.
+Released under the [MIT License](LICENSE).
