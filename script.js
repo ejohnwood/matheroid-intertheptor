@@ -71,7 +71,12 @@ function setupMenu() {
         if (!button || !opSelect.contains(button)) return;
 
         if (button === allOperationsButton) {
-            operationButtons.forEach(opButton => setOperationButtonState(opButton, true));
+            const allSelected = operationButtons.every(opButton => opButton.classList.contains('active'));
+
+            // Clicking ALL again returns to the initial Addition-only setting.
+            operationButtons.forEach(opButton => {
+                setOperationButtonState(opButton, allSelected ? opButton.dataset.value === 'add' : true);
+            });
         } else {
             const activeCount = operationButtons.filter(opButton => opButton.classList.contains('active')).length;
             const isActive = button.classList.contains('active');
