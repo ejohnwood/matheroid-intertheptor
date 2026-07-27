@@ -29,7 +29,7 @@ let spawnCount = 0;
 let nextGoldScore = 10;
 
 // Game Settings
-let currentOp = 'add';
+let currentOps = ['add'];
 let currentDiff = 'easy';
 let currentSpeed = 'cruise';
 
@@ -43,29 +43,63 @@ gameContainer.appendChild(ship);
 
 // --- Menu Logic ---
 function setupMenu() {
-    // Helper to handle selection groups
-    function handleSelect(group, variableSetter) {
+    // Difficulty and speed remain single-select groups.
+    function handleSingleSelect(group) {
         group.addEventListener('click', (e) => {
             if (e.target.classList.contains('menu-btn')) {
-                // Remove active class from siblings
                 Array.from(group.children).forEach(btn => btn.classList.remove('active'));
-                // Add active to clicked
                 e.target.classList.add('active');
-                // Set variable logic handled by caller or state check
             }
         });
     }
 
-    handleSelect(opSelect);
-    handleSelect(diffSelect);
-    handleSelect(speedSelect);
+    const operationButtons = Array.from(opSelect.querySelectorAll('.menu-btn:not([data-value="all"])'));
+    const allOperationsButton = opSelect.querySelector('[data-value="all"]');
+
+    function setOperationButtonState(button, isActive) {
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', isActive.toString());
+    }
+
+    function syncAllOperationsButton() {
+        const allSelected = operationButtons.every(btn => btn.classList.contains('active'));
+        setOperationButtonState(allOperationsButton, allSelected);
+    }
+
+    opSelect.addEventListener('click', (e) => {
+        const button = e.target.closest('.menu-btn');
+        if (!button || !opSelect.contains(button)) return;
+
+        if (button === allOperationsButton) {
+            const allSelected = operationButtons.every(opButton => opButton.classList.contains('active'));
+
+            // Clicking ALL again returns to the initial Addition-only setting.
+            operationButtons.forEach(opButton => {
+                setOperationButtonState(opButton, allSelected ? opButton.dataset.value === 'add' : true);
+            });
+        } else {
+            const activeCount = operationButtons.filter(opButton => opButton.classList.contains('active')).length;
+            const isActive = button.classList.contains('active');
+
+            // Always keep at least one operation selected.
+            if (!(isActive && activeCount === 1)) {
+                setOperationButtonState(button, !isActive);
+            }
+        }
+
+        syncAllOperationsButton();
+    });
+
+    handleSingleSelect(diffSelect);
+    handleSingleSelect(speedSelect);
 
     startBtn.addEventListener('click', startGame);
 }
 
 function startGame() {
     // Read selections
-    currentOp = opSelect.querySelector('.active').dataset.value;
+    currentOps = Array.from(opSelect.querySelectorAll('.menu-btn.active:not([data-value="all"])'))
+        .map(button => button.dataset.value);
     currentDiff = diffSelect.querySelector('.active').dataset.value;
     currentSpeed = speedSelect.querySelector('.active').dataset.value;
 
@@ -73,7 +107,10 @@ function startGame() {
     nextGoldScore = 10;
 
     // Apply Speed Settings
-    if (currentSpeed === 'eco') {
+    if (currentSpeed === 'beginner') {
+        baseFallTime = 18; // Extra time for early learners
+        spawnInterval = 6000; // One every 6s
+    } else if (currentSpeed === 'eco') {
         baseFallTime = 12; // Very slow fall
         spawnInterval = 4000; // One every 4s
     } else if (currentSpeed === 'warp') {
@@ -135,12 +172,8 @@ document.addEventListener('mousedown', (e) => {
 
 // --- Math Generation Logic ---
 function generateProblem() {
-    // Determine operation (handle 'all' case)
-    let op = currentOp;
-    if (op === 'all') {
-        const ops = ['add', 'sub', 'mult', 'div'];
-        op = ops[Math.floor(Math.random() * ops.length)];
-    }
+    // Choose randomly from the operations selected in the mission menu.
+    const op = currentOps[Math.floor(Math.random() * currentOps.length)];
 
     let a, b, problem, answer;
 
@@ -437,9 +470,10 @@ function checkAnswer() {
         // Slight optimization: Increase difficulty slightly over time based on score
         // Limit difficulty scaling to avoid impossible speeds
         if (score > 0 && score % 10 === 0) {
-            // For Eco, we don't speed up much.
+            // Beginner and Eco retain a gentler pace.
             // For Warp, we speed up a little.
             let minFall = 2;
+            if (currentSpeed === 'beginner') minFall = 14;
             if (currentSpeed === 'eco') minFall = 8;
             if (currentSpeed === 'cruise') minFall = 5;
 

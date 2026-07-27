@@ -14,8 +14,8 @@ Choose an operation, difficulty, and game speed to create a practice session tha
 
 ## ✨ Features
 
-- Practice addition, subtraction, multiplication, division, or a mix of all four.
-- Choose from three mental-math difficulty levels and three game speeds.
+- Select any combination of addition, subtraction, multiplication, and division.
+- Choose from three mental-math difficulty levels and four game speeds.
 - Destroy every fifth **Violet Boss Asteroid** for bonus points.
 - Hit **Golden Smart Bombs** to clear every asteroid on screen.
 - Build a five-answer streak to activate **Hyper-Drive** and bonus scoring.
@@ -30,11 +30,11 @@ Choose an operation, difficulty, and game speed to create a practice session tha
 | **Medium** | Problems up to 50 | 0–12 tables | Divisors 1–12 |
 | **Hard** | Problems up to 100 | 4–20 × 2–9 | Quotients 5–20 |
 
-Engine speed can be set to **Eco** for learning, **Cruise** for balanced play, or **Warp** for a fast challenge.
+Engine speed can be set to **Beginner** for kindergarten and first-grade pacing, **Eco** for learning, **Cruise** for balanced play, or **Warp** for a fast challenge. Speed settings do not change the math.
 
 ## 🕹️ How to Play
 
-1. Choose an operation, difficulty, and engine speed.
+1. Choose one or more operations, a difficulty, and an engine speed.
 2. Select **Launch Mission**.
 3. Type an asteroid's answer using your keyboard or number pad.
 4. Keep answering correctly to protect your shields and build your streak.
